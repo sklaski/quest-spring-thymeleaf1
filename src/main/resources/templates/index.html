@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header th:fragment="header">
+<header th:replace="header.html :: header">Header TODO</header>
     <nav>
         <span>Doctor Secret Service</span>
         <a href="/">Sign In</a>
     </nav>
 </header>
 
-<form method="get" action="doctor">
+<form method="get" th:action="@{/doctor}">
     <fieldset>
         <label for="name">Your doctor's name: </label>
         <input id="name" name="name" type="text" placeholder="Your name here">
@@ -25,7 +25,7 @@
     </fieldset>
 </form>
 
-<footer th:fragment="footer">
+<header th:replace="footer.html :: footer">Header TODO</header>
     <ul>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Facebook</a></li>
